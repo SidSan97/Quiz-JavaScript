@@ -160,7 +160,7 @@ function verificarSeAcertou(nQuestao, resposta) {
         } else {
             proximaQuestao(proxima)
         }
-    }, 250)
+    }, 5000)
     desbloquearAlternativas()
 }
 
