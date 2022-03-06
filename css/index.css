@@ -102,6 +102,16 @@ h1 {
     cursor: pointer;
 }
 
+.resp {
+    text-align: center;
+    background: #62a0ed;
+    display: block;
+    /* border: 1px solid black; */
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
 .bloqueado {
     display: none;
 }

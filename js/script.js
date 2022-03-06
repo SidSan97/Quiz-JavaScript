@@ -220,12 +220,13 @@ function verificarSeAcertou(nQuestao, resposta) {
     } else {
         //console.log("Errou!")
         //respostaEsta.textContent = "Errada 😢"
+        document.getElementById("correct").innerHTML = questoes[numeroDaQuestao].correta;
         piscarNoErro()
         somErro.play()
     }
     setTimeout(() => {
         tirarPiscar()
-    }, 150);
+    }, 2000);
     
     // atualizar placar
     placar = pontos
@@ -244,7 +245,7 @@ function verificarSeAcertou(nQuestao, resposta) {
         } else {
             proximaQuestao(proxima)
         }
-    }, 150)
+    }, 3000)
     desbloquearAlternativas()
 }
 
