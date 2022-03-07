@@ -213,20 +213,30 @@ function verificarSeAcertou(nQuestao, resposta) {
     if(respostaEscolhida == certa) {
         //console.log("Acertou")
         //respostaEsta.textContent = "Correta 😊"
+        document.getElementById("resp").style.display = "block";
+        document.getElementById("correct").style.color = "#181a18";
+        document.getElementById("correct").innerHTML = "Resposta está correta: " + questoes[numeroDaQuestao].correta;
         piscarNoAcerto()
         somAcerto.play()
         pontos += 10 // pontos = pontos + 10
-        if(nQuestao.value == 1 && pontos == 20) { pontos = 10 }
-    } else {
+
+        if(nQuestao.value == 1 && pontos == 20) 
+        { 
+            pontos = 10 
+        }
+    } 
+    else {
         //console.log("Errou!")
         //respostaEsta.textContent = "Errada 😢"
-        document.getElementById("correct").innerHTML = questoes[numeroDaQuestao].correta;
+        document.getElementById("resp").style.display = "block";
+        document.getElementById("correct").style.color = "#c10d0d";
+        document.getElementById("correct").innerHTML = "A resposta correta é: " + questoes[numeroDaQuestao].correta;
         piscarNoErro()
         somErro.play()
     }
     setTimeout(() => {
         tirarPiscar()
-    }, 2000);
+    }, 1000);
     
     // atualizar placar
     placar = pontos
@@ -237,6 +247,7 @@ function verificarSeAcertou(nQuestao, resposta) {
 
     setTimeout(function() {
 
+        document.getElementById("resp").style.display = "none";
         proxima = numeroDaQuestao+1
 
         if(proxima > totalDeQuestoes) {

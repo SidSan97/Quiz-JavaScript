@@ -102,15 +102,20 @@ h1 {
     cursor: pointer;
 }
 
-.resp {
+#resp {
+    padding: 9px;
     text-align: center;
     background: #62a0ed;
-    display: block;
-    /* border: 1px solid black; */
+    display: none;
     border-radius: 5px;
     margin-bottom: 15px;
 }
 
+#correct{
+    font-weight: 500;
+    font-size: 29px;
+    color: #181a18;
+}
 
 .bloqueado {
     display: none;
